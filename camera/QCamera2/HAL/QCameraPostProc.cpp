@@ -2349,7 +2349,7 @@ void *QCameraPostProcessor::dataSaveRoutine(void *data)
 
                 pme->m_ongoingJpegQ.flushNodes(matchJobId, (void*)&job_data->jobId);
 
-                CDBG_HIGH("[KPI Perf] %s : jpeg job %u", __func__, job_data->jobId);
+                CDBG_HIGH("[KPI Perf] %s : jpeg job %d", __func__, job_data->jobId);
 
                 if (is_active == TRUE) {
                     memset(saveName, '\0', sizeof(saveName));
@@ -2368,7 +2368,7 @@ void *QCameraPostProcessor::dataSaveRoutine(void *data)
                                   __func__, written_len,
                                   job_data->out_data.buf_filled_len);
                         } else {
-                            CDBG_HIGH("%s: written number of bytes %lu\n",
+                            CDBG_HIGH("%s: written number of bytes %ld\n",
                                 __func__, written_len);
                         }
 
